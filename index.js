@@ -26,6 +26,7 @@ return function deepmerge(target, src) {
                 }
             }
         });
+        dst = dst.filter(function(elem) { return !!elem; });
     } else {
         if (target && typeof target === 'object') {
             Object.keys(target).forEach(function (key) {
